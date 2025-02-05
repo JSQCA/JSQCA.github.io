@@ -1,0 +1,12 @@
+{% assign color1 = include.color1 | default: "#000000" %}
+{% assign color2 = include.color2 | default: "#ffffff" %}
+{% assign direction = include.direction | default: "down" %}
+
+<svg viewBox="0 0 1000 50" width="100%" height="50" preserveAspectRatio="none" style="--color1: var({{ include.color1 }}); --color2: var({{ include.color2 }});" >
+    <rect width="1000" height="50" fill="var(--color1)"/>
+    {% if direction == "down" %}
+    <path d="M0 50 L1000 0 L1000 50 Z" fill="var(--color2)"/>
+    {% else %}
+    <path d="M0 0 L1000 0 L1000 50 Z" fill="var(--color2)"/>
+    {% endif %}
+</svg>
