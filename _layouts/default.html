@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="/static/css/site.css">
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <header>
+      <img src="/static/img/main_logo.png" />
+      {% include navigation.html %}
+    </header>
+    <main>
+      {{ content }}
+    </main>
     <footer>
       <div class="content">
         <p><strong>The Journal Square Community Association</strong>. A 501(c)(3) Corporation. Working together to build a better community – Clean, Green, and Safe.</p>
