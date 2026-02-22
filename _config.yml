@@ -1,0 +1,21 @@
+title: Journal Square Community Association
+description: >-
+  A 501(c)(3) nonprofit dedicated to promoting a clean, green, and safe
+  Journal Square. Advocating for residents' rights and celebrating the
+  rich history of the area.
+url: "https://jsqca.github.io"
+baseurl: ""
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

@@ -1,0 +1,41 @@
+---
+layout: page
+title: Membership
+permalink: /membership
+---
+
+<p>Join the Journal Square Community Association and help make our neighborhood cleaner, greener, and safer. The JSQCA is a registered 501(c)(3), so membership cost is tax deductible.</p>
+
+<h2>Individual Membership &ndash; $25/year</h2>
+<p>Membership affords you a vote in board elections, statements of support or protest being offered by the organization, as well as any other formal votes that impact the direction and affiliations of the organization. Membership must be renewed every calendar year.</p>
+
+<h2>Business Membership &ndash; $100/year</h2>
+<p>Businesses located in the Journal Square area can join the JSQCA as members. Benefits include networking opportunities, increased promotion for your services or products, active participation in community events, access to meeting updates and essential materials, and the satisfaction of contributing to the enhancement of Journal Square.</p>
+
+<div class="form-tabs">
+  <button class="active" onclick="switchTab('individual')">Individual Membership</button>
+  <button onclick="switchTab('business')">Business Membership</button>
+</div>
+
+<div id="individual" class="form-panel active">
+  <div class="form-embed">
+    <iframe src="https://www.cognitoforms.com/JournalSquareCommunityAssociation/JSQCAMembershipForm" title="JSQCA Individual Membership Form" loading="lazy"></iframe>
+  </div>
+</div>
+
+<div id="business" class="form-panel">
+  <div class="form-embed">
+    <iframe src="https://www.cognitoforms.com/JournalSquareCommunityAssociation/JSQCABusinessMembershipForm" title="JSQCA Business Membership Form" loading="lazy"></iframe>
+  </div>
+</div>
+
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.form-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.form-tabs button').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById(tab).classList.add('active');
+  var buttons = document.querySelectorAll('.form-tabs button');
+  if (tab === 'individual') buttons[0].classList.add('active');
+  else buttons[1].classList.add('active');
+}
+</script>
