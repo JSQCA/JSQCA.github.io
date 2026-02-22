@@ -917,6 +917,22 @@ footer .content {
     font-size: 0.85rem;
   }
 
+  section#banner {
+    margin: 2rem 4% 1.5rem;
+  }
+
+  section.home {
+    margin: 0 4% 2.5rem;
+  }
+
+  section.page-content {
+    margin: 2rem 4% 1.5rem;
+  }
+
+  section.home .content {
+    padding: 4.5rem 10% 4.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -937,9 +953,10 @@ footer .content {
    ============================================ */
 @media (max-width: 640px) {
   :root {
-    --content-padding: 5%;
+    --content-padding: 6%;
   }
 
+  /* --- Header / Nav --- */
   header {
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
@@ -995,58 +1012,98 @@ footer .content {
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
+  /* --- Banner --- */
   section#banner {
-    margin: 2rem 0.75rem 1rem;
-    clip-path: polygon(0 15px, 100% 0, 100% calc(100% - 15px), 0 100%);
+    margin: 1.5rem 0.5rem 1.25rem;
+    clip-path: polygon(0 12px, 100% 0, 100% calc(100% - 12px), 0 100%);
   }
 
   section#banner .content {
-    min-height: 350px;
+    min-height: 280px;
+  }
+
+  .banner-overlay {
+    padding: 1.5rem;
   }
 
   .banner-overlay h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .banner-overlay p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
   }
 
+  .banner-overlay .cta-hero {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* --- Home Sections --- */
   section.home {
-    margin: 0 0.75rem 2rem;
-    clip-path: polygon(0 15px, 100% 0, 100% calc(100% - 15px), 0 100%);
+    margin: 0 0.5rem 1.5rem;
+    clip-path: polygon(0 12px, 100% 0, 100% calc(100% - 12px), 0 100%);
   }
 
   section.home .content {
-    padding: 3.5rem 8% 3.5rem;
-  }
-
-  section.page-content {
-    margin: 2rem 0.75rem 1rem;
-    clip-path: polygon(0 15px, 100% 0, 100% calc(100% - 15px), 0 100%);
-  }
-
-  .involve-grid {
-    grid-template-columns: 1fr;
+    padding: 3rem 7% 3rem;
   }
 
   section.home h1 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   section.home p {
-    font-size: 1.15rem;
-    line-height: 1.75rem;
+    font-size: 1.05rem;
+    line-height: 1.65rem;
   }
 
-  section.page-content h1 {
-    font-size: 2rem;
+  /* --- Inner Pages --- */
+  section.page-content {
+    margin: 1.5rem 0.5rem 1.25rem;
+    clip-path: polygon(0 12px, 100% 0, 100% calc(100% - 12px), 0 100%);
   }
 
   section.page-content .content {
-    padding: 2rem var(--content-padding) 3rem;
+    padding: 2.5rem var(--content-padding) 3rem;
   }
 
+  section.page-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  section.page-content h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  section.page-content p {
+    font-size: 1rem;
+  }
+
+  section.page-content ul,
+  section.page-content ol {
+    font-size: 1rem;
+    margin-left: 1.25rem;
+  }
+
+  /* --- Callouts --- */
+  .callout {
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .callout ul {
+    font-size: 0.95rem;
+    margin-left: 1.25rem;
+  }
+
+  /* --- Card Grids --- */
   .committee-grid,
   .resource-grid,
   .involve-grid,
@@ -1054,16 +1111,68 @@ footer .content {
     grid-template-columns: 1fr;
   }
 
+  .officers-grid--featured {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .involve-card,
+  .committee-card,
+  .resource-card {
+    padding: 1.25rem;
+  }
+
+  section.home .involve-card h2 {
+    font-size: 1.2rem;
+  }
+
+  /* --- About nav links --- */
+  section#about nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  section#about nav a {
+    text-align: center;
+  }
+
+  .about-photo {
+    max-height: 200px;
+    margin: 1.5rem 0 0.75rem;
+  }
+
+  /* --- Forms --- */
+  .form-tabs {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-tabs button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .form-embed iframe {
+    min-height: 500px;
+  }
+
+  /* --- Gallery --- */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  /* --- Footer --- */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  section#about nav {
-    flex-direction: column;
-  }
-
-  section#about nav a {
-    text-align: center;
+  .footer-logo {
+    width: 150px;
   }
 }
