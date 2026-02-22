@@ -14,7 +14,9 @@ To promote a clean, green, and safe Journal Square. We advocate for the rights a
 
 ## Meetings
 
-Meetings are held on the second Monday of every month from 7 PM to 9 PM at 71 Sip Ave., 6th Floor. Our meetings are also streamed via Facebook.
+<div class="callout callout--yellow">
+  <p>Meetings are held on the <strong>second Monday of every month from 7 PM to 9 PM</strong> at 71 Sip Ave., 6th Floor. Our meetings are also streamed via Facebook.</p>
+</div>
 
 ## Get Involved
 

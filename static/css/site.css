@@ -10,14 +10,17 @@
   --yellow-bright: rgb(250, 175, 58);
   --yellow-base:   rgb(194, 137, 46);
   --yellow-deep:   rgb(140, 99, 33);
+  --yellow-muted:  rgb(253, 237, 206);
 
   --green-bright:  rgb(140, 197, 65);
   --green-base:    rgb(98, 138, 46);
   --green-deep:    rgb(56, 79, 27);
+  --green-muted:   rgb(222, 242, 196);
 
   --purple-bright: rgb(160, 95, 225);
   --purple-base:   rgb(115, 68, 162);
   --purple-deep:   rgb(69, 40, 98);
+  --purple-muted:  rgb(232, 215, 248);
 
   --blue-bright:   rgb(43, 170, 231);
   --blue-base:     rgb(24, 133, 194);
@@ -214,15 +217,75 @@ main {
    Banner (Homepage hero)
    ============================================ */
 section#banner {
-  background: var(--white);
+  background: var(--black);
 }
 
 section#banner .content {
-  min-height: 500px;
+  min-height: 520px;
   background-image: url("/static/img/banner.jpg");
   background-size: cover;
   background-position: center 25%;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section#banner .content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.banner-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.banner-overlay h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-overlay .cta-hero {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: var(--green-bright);
+  color: var(--green-deep);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-overlay .cta-hero:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  color: var(--green-deep);
 }
 
 /* ============================================
@@ -272,7 +335,7 @@ section#about {
 }
 
 section#get_involved {
-  background: var(--yellow-bright);
+  background: var(--yellow-muted);
   color: var(--black);
 }
 
@@ -281,7 +344,7 @@ section#get_involved h1 {
 }
 
 section#committees {
-  background: var(--green-bright);
+  background: var(--green-muted);
   color: var(--black);
 }
 
@@ -290,7 +353,7 @@ section#committees h1 {
 }
 
 section#resources {
-  background: var(--purple-bright);
+  background: var(--purple-muted);
   color: var(--black);
 }
 
@@ -333,9 +396,11 @@ section#about nav a:hover {
 }
 
 .committee-card {
-  background: rgba(255, 255, 255, 0.25);
+  background: white;
   border-radius: 10px;
   padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--green-bright);
 }
 
 section.home .committee-card h2 {
@@ -366,13 +431,15 @@ section.home .committee-card p {
 }
 
 .resource-card {
-  background: rgba(255, 255, 255, 0.25);
+  background: white;
   border-radius: 10px;
   padding: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: background 0.2s, transform 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s;
   display: block;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--purple-bright);
 }
 
 a.resource-card {
@@ -380,13 +447,13 @@ a.resource-card {
 }
 
 a.resource-card:hover {
-  background: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   color: var(--black);
 }
 
 .resource-card:hover {
-  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 section.home .resource-card h2 {
@@ -405,15 +472,17 @@ section.home .resource-card p {
 /* Get Involved cards */
 .involve-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin-top: 1.5rem;
 }
 
 .involve-card {
-  background: rgba(255, 255, 255, 0.25);
+  background: white;
   border-radius: 10px;
   padding: 1.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--yellow-bright);
 }
 
 section.home .involve-card h2 {
@@ -497,6 +566,65 @@ section.page-content li {
 
 section.page-content strong {
   color: var(--black);
+}
+
+/* Callout boxes for key info */
+.callout {
+  background: white;
+  border-left: 4px solid var(--blue-bright);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.callout--green {
+  border-left-color: var(--green-bright);
+}
+
+.callout--yellow {
+  border-left-color: var(--yellow-bright);
+}
+
+.callout--purple {
+  border-left-color: var(--purple-bright);
+}
+
+.callout p {
+  margin-bottom: 0.5rem;
+}
+
+section.page-content .callout h2,
+.callout h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+}
+
+.callout li {
+  margin-bottom: 0.35rem;
+}
+
+/* About section photo */
+.about-photo {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 2rem 0 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Officers / leadership grid */
@@ -687,6 +815,24 @@ section.page-content strong {
   object-fit: cover;
 }
 
+.gallery-item .caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.gallery-notice {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid var(--blue-bright);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
 /* ============================================
    Footer
    ============================================ */
@@ -736,6 +882,13 @@ footer .content {
 
 .social-links a:hover {
   color: white;
+}
+
+.footer-logo {
+  display: block;
+  width: 180px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 .footer-bottom {
@@ -849,7 +1002,19 @@ footer .content {
   }
 
   section#banner .content {
-    min-height: 300px;
+    min-height: 350px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.75rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1rem;
+  }
+
+  .involve-grid {
+    grid-template-columns: 1fr;
   }
 
   section.home h1 {

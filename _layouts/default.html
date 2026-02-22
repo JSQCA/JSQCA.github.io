@@ -6,6 +6,7 @@
     <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ page.description | default: site.description | strip_html | truncatewords: 50 }}">
     <link rel="stylesheet" href="/static/css/site.css">
+    <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg">
   </head>
   <body>
     <header>
@@ -26,6 +27,7 @@
       <div class="content">
         <div class="footer-grid">
           <div class="footer-info">
+            <img src="/static/img/main_logo.png" alt="JSQCA" class="footer-logo" />
             <p><strong>Journal Square Community Association</strong></p>
             <p>A 501(c)(3) Corporation</p>
             <p>Working together to build a better community &ndash; Clean, Green, and Safe.</p>
