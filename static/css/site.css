@@ -963,7 +963,7 @@ footer .content {
   }
 
   header .logo img {
-    width: 180px;
+    width: 240px;
   }
 
   .menu-toggle {
@@ -1006,7 +1006,9 @@ footer .content {
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   }
 
-  header nav a {
+  header nav > a {
+    display: block;
+    width: 100%;
     padding: 0.75rem 0.5rem;
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
