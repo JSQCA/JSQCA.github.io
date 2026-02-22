@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@200;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
 
 /* ============================================
    Custom Properties
@@ -10,17 +10,17 @@
   --yellow-bright: rgb(250, 175, 58);
   --yellow-base:   rgb(194, 137, 46);
   --yellow-deep:   rgb(140, 99, 33);
-  --yellow-muted:  rgb(253, 237, 206);
+  --yellow-muted:  rgb(252, 226, 173);
 
   --green-bright:  rgb(140, 197, 65);
   --green-base:    rgb(98, 138, 46);
   --green-deep:    rgb(56, 79, 27);
-  --green-muted:   rgb(222, 242, 196);
+  --green-muted:   rgb(208, 235, 170);
 
   --purple-bright: rgb(160, 95, 225);
   --purple-base:   rgb(115, 68, 162);
   --purple-deep:   rgb(69, 40, 98);
-  --purple-muted:  rgb(232, 215, 248);
+  --purple-muted:  rgb(220, 198, 242);
 
   --blue-bright:   rgb(43, 170, 231);
   --blue-base:     rgb(24, 133, 194);
@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--black);
   min-height: 100vh;
   display: flex;
@@ -271,21 +271,19 @@ section#banner .content::before {
 
 .banner-overlay .cta-hero {
   display: inline-block;
-  padding: 0.85rem 2rem;
-  background: var(--green-bright);
-  color: var(--green-deep);
+  padding: 0.75rem 1.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--black);
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: transform 0.15s, box-shadow 0.15s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
 }
 
 .banner-overlay .cta-hero:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  color: var(--green-deep);
+  background: white;
+  color: var(--black);
 }
 
 /* ============================================
@@ -396,11 +394,9 @@ section#about nav a:hover {
 }
 
 .committee-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--green-bright);
 }
 
 section.home .committee-card h2 {
@@ -431,15 +427,13 @@ section.home .committee-card p {
 }
 
 .resource-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 1.5rem;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: background 0.2s, transform 0.15s;
   display: block;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--purple-bright);
 }
 
 a.resource-card {
@@ -447,13 +441,13 @@ a.resource-card {
 }
 
 a.resource-card:hover {
+  background: rgba(255, 255, 255, 0.8);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   color: var(--black);
 }
 
 .resource-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 section.home .resource-card h2 {
@@ -478,11 +472,9 @@ section.home .resource-card p {
 }
 
 .involve-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.55);
   border-radius: 10px;
   padding: 1.75rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--yellow-bright);
 }
 
 section.home .involve-card h2 {
@@ -570,24 +562,22 @@ section.page-content strong {
 
 /* Callout boxes for key info */
 .callout {
-  background: white;
-  border-left: 4px solid var(--blue-bright);
-  border-radius: 8px;
+  background: rgba(43, 170, 231, 0.1);
+  border-radius: 10px;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .callout--green {
-  border-left-color: var(--green-bright);
+  background: rgba(140, 197, 65, 0.15);
 }
 
 .callout--yellow {
-  border-left-color: var(--yellow-bright);
+  background: rgba(250, 175, 58, 0.15);
 }
 
 .callout--purple {
-  border-left-color: var(--purple-bright);
+  background: rgba(160, 95, 225, 0.1);
 }
 
 .callout p {
@@ -624,7 +614,6 @@ section.page-content .callout h2,
   object-fit: cover;
   border-radius: 10px;
   margin: 2rem 0 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Officers / leadership grid */
@@ -643,7 +632,7 @@ section.page-content .callout h2,
   background: white;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   text-align: center;
 }
 
@@ -721,7 +710,7 @@ section.page-content .callout h2,
   border-radius: 10px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .form-embed iframe {
@@ -799,13 +788,12 @@ section.page-content .callout h2,
   border-radius: 8px;
   overflow: hidden;
   background: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  transition: transform 0.15s, box-shadow 0.15s;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s;
 }
 
 .gallery-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .gallery-item img {
@@ -822,12 +810,10 @@ section.page-content .callout h2,
 }
 
 .gallery-notice {
-  background: white;
+  background: rgba(43, 170, 231, 0.1);
   border-radius: 10px;
   padding: 1.5rem 2rem;
   margin: 1.5rem 0;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid var(--blue-bright);
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
