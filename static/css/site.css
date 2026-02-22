@@ -355,12 +355,12 @@ section#committees h1 {
 }
 
 section#resources {
-  background: var(--purple-muted);
+  background: var(--blue-bright);
   color: var(--black);
 }
 
 section#resources h1 {
-  color: var(--purple-deep);
+  color: var(--blue-deep);
 }
 
 /* About section nav links */
